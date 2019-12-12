@@ -1,1 +1,1 @@
-# allianceNotAllowSameName
+# nonSameNameAlliance
