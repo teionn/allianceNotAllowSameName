@@ -7,7 +7,6 @@ def rerename(node_uuid):
         if "|" in node:
             basename = re.search(".+\|(.+?)(\d+)?$", node).group(1)
             rename_name = cmds.rename(node, "{}#".format(basename))
-            rename.update({node:{"name":rename_name}})
 
 def renameEvent():
     try:
