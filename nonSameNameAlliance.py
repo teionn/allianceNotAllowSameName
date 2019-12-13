@@ -5,7 +5,7 @@ import re
 def rerename(node_uuid):
     for node in cmds.ls(node_uuid):
         if "|" in node:
-            basename = re.search(".+\|(.+?)(\d+)?$", node).group(1)
+            basename = re.search("^(.+)?\|(.+?)(\d+)?$", node).group(2)
             rename_name = cmds.rename(node, "{}#".format(basename))
 
 def renameEvent():
